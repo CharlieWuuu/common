@@ -60,4 +60,17 @@ $(document).ready(function () {
       $('.nav__button__searchBar').animate({ width: 'toggle' });
     });
   }
+
+  //顯示footer
+  $.ajax({
+    dataType: 'html',
+    url: '../common/assets/html/footer.html',
+    jsonp: '$callback',
+    success: showFooterData,
+  });
+
+  function showFooterData(data) {
+    // Use the template
+    $('#footer').append(data);
+  }
 });
