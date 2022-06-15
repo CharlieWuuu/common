@@ -44,6 +44,7 @@ function showFilmAmount() {
 //
 
 $(document).ready(function () {
+  //顯示header
   $.ajax({
     dataType: 'html',
     url: '/common/assets/html/nav.html',
