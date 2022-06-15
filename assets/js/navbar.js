@@ -47,7 +47,7 @@ $(document).ready(function () {
   //顯示header
   $.ajax({
     dataType: 'html',
-    url: '/common/assets/html/nav.html',
+    url: '../common/assets/html/nav.html',
     jsonp: '$callback',
     success: showHeaderData,
   });
