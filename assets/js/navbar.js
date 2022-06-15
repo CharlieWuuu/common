@@ -52,16 +52,6 @@ $(document).ready(function () {
     success: showHeaderData,
   });
 
-  function showHeaderData(data) {
-    // Use the template
-    $('#navbar').append(data);
-    showFilmAmount();
-    // (4) 顯示搜尋input
-    document.querySelector('.fa-search').addEventListener('click', function () {
-      $('.nav__button__searchBar').animate({ width: 'toggle' });
-    });
-  }
-
   //顯示footer
   $.ajax({
     dataType: 'html',
@@ -69,9 +59,21 @@ $(document).ready(function () {
     jsonp: '$callback',
     success: showFooterData,
   });
-
-  function showFooterData(data) {
-    // Use the template
-    $('#footer').append(data);
-  }
 });
+
+function showHeaderData(data) {
+  // Use the template
+  $('#navbar').append(data);
+  showFilmAmount();
+  // (4) 顯示搜尋input
+  document.querySelector('.fa-search').addEventListener('click', function () {
+    $('.nav__button__searchBar').animate({ width: 'toggle' });
+  });
+}
+
+function showFooterData(data) {
+  // Use the template
+  console.log('show footer');
+  $('#footer').append(data);
+  console.log('after show footer');
+}
