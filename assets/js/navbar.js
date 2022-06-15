@@ -46,7 +46,7 @@ function showFilmAmount() {
 $(document).ready(function () {
   $.ajax({
     dataType: 'html',
-    url: '../11. common/assets/html/nav.html',
+    url: '/common/assets/html/nav.html',
     jsonp: '$callback',
     success: showHeaderData,
   });
