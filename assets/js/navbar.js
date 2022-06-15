@@ -41,6 +41,8 @@ function showFilmAmount() {
   }
 }
 
+//
+
 $(document).ready(function () {
   $.ajax({
     dataType: 'html',
